@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
-    //aaaaaaaaaaaaa
+    //
+    public function index(){
+        return 'hello';
+    }
 }
