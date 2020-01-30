@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+}
+.register {
+  text-align: center;
+  background-color: bisque;
+}
+.employee-container {
+  text-align: center;
+  padding: 10px;
+}
+.employee {
+  display: flex;
+  flex-direction: column;
+}
+.employee-name {
+  margin: 10px;
+}
