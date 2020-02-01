@@ -13,4 +13,17 @@ class EmployeeController extends Controller
         // dd($employees->toArray());
         return view('employee.index',['employees'=>$employees]);
     }
+
+    public function show($id){
+        $employee = Employee::find($id);
+        return view('employee.show',['employee'=>$employee]);
+    }
+
+    public function create(){
+        return view('employee.create');
+    }
+
+
+
+
 }

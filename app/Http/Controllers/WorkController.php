@@ -8,7 +8,5 @@ use App\Work;
 class WorkController extends Controller
 {
     //
-    public function index(){
-        $work
     }
 }

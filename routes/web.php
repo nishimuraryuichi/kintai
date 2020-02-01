@@ -12,3 +12,5 @@
 */
 
 Route::get('/','EmployeeController@index');
+Route::get('/employee/{id}','EmployeeController@show');
+Route::get('/employee/create','EmployeeController@create');
