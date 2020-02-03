@@ -8,4 +8,7 @@
         <a href="">出勤</a>
         <a href="">退勤</a>
       </div>
+      <div class="fix">
+        <a href="{{ action('EmployeeController@edit',$employee) }}">編集</a>
+      </div>
 @endsection

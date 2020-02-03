@@ -23,7 +23,37 @@ class EmployeeController extends Controller
         return view('employee.create');
     }
 
+    public function store(Request $request){
+        $this->validate($request,[
+            'name'=>'required',
+            'sex'=>'required'
+        ]);
+        $employee = new Employee();
+        $employee->name = $request->name;
+        $employee->sex = $request->sex;
+        $employee->save();
+        return redirect('/');
+    }
 
+    public function edit(Employee $employee){
+        return view('employee.edit')->with('employee',$employee);
+    }
+
+    public function update(Request $request,Employee $employee){
+        $this->validate($request,[
+            'name'=>'required',
+            'sex'=>'required'
+        ]);
+        $employee->name = $request->name;
+        $employee->sex = $request->sex;
+        $employee->save();
+        return redirect('/');
+    }
+
+    public function destroy(Employee $employee){
+        $employee->delete();
+        return redirect('/');
+    }
 
 
 }
