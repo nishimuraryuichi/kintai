@@ -15,11 +15,11 @@ class CreateTimecardsTable extends Migration
     {
         Schema::create('timecards', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('employee_id');
             $table->datetime('in');
-            $table->datetime('out',null);
-            $table->integer('employee_id')->unsigned();
+            $table->datetime('out')->nullable();
             $table->foreign('employee_id')->references('id')->on('employees');
-            $table->timestamps();
+            $table->index('in');
         });
     }
 
