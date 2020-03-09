@@ -9,11 +9,17 @@ use App\Timecard;
 class TimecardController extends Controller
 {
     //
-    public function in($in){
+    public function in(Request $request){
+        $this->validate($request,[
+            'timestanps'=>'required'
+        ]);
+
+        dd($request);
+
 
         // $timecards = Timecard::find($in);
         $timecards = Timecard::orderBy('in','desc')->get();
-        dd($timecards);
+        // dd($timecards);
 
         return redirect('/');
     }
