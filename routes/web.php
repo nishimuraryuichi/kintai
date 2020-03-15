@@ -18,5 +18,5 @@ Route::post('/employee','EmployeeController@store');
 Route::get('/employee/{employee}/edit','EmployeeController@edit');
 Route::patch('/employee/{employee}','EmployeeController@update');
 Route::delete('/employee/{employee}','EmployeeController@destroy');
-Route::post('/employee/{employee}','TimecardController@in');
-Route::post('/employee/{employee}/out','TimecardController@out')->name('employee/out');
+Route::post('/employee/{employee}/in','TimecardController@in');
+Route::post('/employee/{employee}/out','TimecardController@out');

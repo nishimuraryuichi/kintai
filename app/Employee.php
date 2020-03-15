@@ -8,4 +8,9 @@ class Employee extends Model
 {
     //
     protected $fillable = ['name','sex'];
+
+    public function timecards()                                                                                                                
+    {                                                                                                                                          
+        return $this->hasMany('App\Timecard');                                                                                                 
+    }
 }

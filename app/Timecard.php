@@ -8,4 +8,6 @@ class Timecard extends Model
 {
     //
     protected $fillable = ['employee_id','in','out'];
+
+    public $timestamps = false;
 }

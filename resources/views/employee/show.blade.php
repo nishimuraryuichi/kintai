@@ -9,12 +9,12 @@
           $now = new DateTime();
           echo $now->format('Y月m月d日 H時i分s秒').PHP_EOL;
         ?>
-        <form method="post" action="{{ url('/employee',$employee->id )}}">
+        <form method="post" action="{{ url("/employee/{$employee->id}/in")}}">
           @csrf
           @method('POST')
           <button type="submit">出勤</button>
         </form>
-        <form method="post" action="{{url('/employee',$employee->id,'/out')}}">
+        <form method="post" action="{{ url("/employee/{$employee->id}/out")}}">
           @csrf
           @method('POST')
           <button type="submit">退勤</button>
